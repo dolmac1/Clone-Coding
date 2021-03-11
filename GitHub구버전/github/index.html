@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub</title>
+
+
+    <meta name="author" content="dolmac">
+    <meta name="description" content="깃허브 클론 코딩">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 인터넷 익스플로러의 랜더링 방식을 최신의 방식으로 랜더링 되도록 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1"> 
+    <!-- 가로 너비는 장비의 가로 너비, 최초 화면을 띄우면 배율이 1, 유저가 확대 축소를 못하도록 막음 -->
+
+    <!--Open Graph-->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GitHub Clone">
+    <meta property="og:title" content="GitHub Clone">
+    <meta property="og:description" content="GitHub clone coding">
+    <meta property="og:image" content="img/logo__github.png">
+    <meta property="og:url" content="https://github.com">
+    <!-- og는 사이트에서 외부에 제공할 정보들을 지정(카카오톡에 공유해보면 이거 정보를 끌어다가 나타내줌) -->
+
+    <!--Twitter Card-->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="GitHub Clone">
+    <meta property="twitter:title" content="GitHub Clone">
+    <meta property="twitter:description" content="GitHub clone coding">
+    <meta property="twitter:image" content="img/logo__github.png">
+    <meta property="twitter:url" content="https://github.com">
+    <!--twitter는 트위터에 제공할 정보-->
+
+    <!--파비콘(favorite icon)(작업표시줄에 나올 아이콘)의 경우에 root경로에 favicon.ico를 넣어두면 자동으로 설정됨-->
+    <link rel="icon" href="./favicon.png">
+    <link rel="apple-touch-icon" href="./favicon.png">
+    <!-- 애플 어플의 아이콘 -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- 구글 폰트 include -->
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg==" crossorigin="anonymous" />
+    <!-- reset.css 적용(우리의 css보다 앞에 넣어줘야함)-->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="body__container">
+<!-- body 대신에 스타일을 넣어줄 컨테이너 -->
+<!-- BEM이라는 CSS 작명 규칙에 의해서 _를 두번 써주는 것
+    __는 ~의 일부분이다 라는 의미 따라서 body의 일부분인 container다
+    --는 ~의 상태를 의미
+    -는 일반적인 작명
+-->
+    <!-- HEADER -->
+    <header class="section">
+        <div class="inner clearfix">
+            <div class="menu-group float--left">
+                <div class="logo"><a href="#">GitHub</a></div>
+                <ul class="main-menu">
+                    <li><a href="#">Personal</a></li>
+                    <li><a href="#">Open sourse</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Explore</a></li>
+                </ul>
+            </div>
+
+            <div class="sign-group float--right">
+                <div class="btn-group">
+                    <a href="#" class="btn sign-in">Sign in</a>
+                    <a href="#" class="btn btn--primary sign-up">Sign up</a>
+                </div>
+                <form id="search-form" action="">
+                    <input type="text" id="search" class="input--text" placeholder="Search GitHub">
+                    <input type="submit" value="submit"> <!--엔터 누르면 전송되게-->
+                </form>
+                <ul class="sub-menu">
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+        </div><!--컨텐츠들을 가운데로 몰아줄 컨테이너-->
+    </header>
+
+
+</div>
+</body>
+</html>
