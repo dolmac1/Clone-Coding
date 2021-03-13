@@ -109,6 +109,99 @@
         </div>
     </section>
 
+    <!-- FEATURE -->
+    <section class="section section--feature">
+        <div class="summary">
+            <h2 class="summary__title">
+                Welcome home, developers
+            </h2>
+            <p class="summary__description">
+                GitHub fosters a fast, flexible, and collaborative development process that lets you work on your own or with others.
+            </p>
+            <div class="video">
+                <div class="video-ratio">
+                    <iframe width="950" height="539" src="https://www.youtube.com/embed/afvT1c1ii0c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="tiles">
+                <div class="inner">
+                    <!-- <ul class="clearfix"> -->
+                    <ul>
+                        <li>
+                            <img src="img/feature-tile__build.png" alt="build">
+                            <h3>For everything you build</h3>
+                            <p>Host and manage your code on GitHub. You can keep your work private or share it with the world.</p>
+                        </li>
+                        <li>
+                            <img src="img/feature-tile__work.png" alt="work">
+                            <h3>A better way to work</h3>
+                            <p>From hobbyists to professionals, GitHub helps developers simplify the way they build software.</p>
+                        </li>
+                        <li>
+                            <img src="img/feature-tile__projects.png" alt="project">
+                            <h3>Millions of projects</h3>
+                            <p>GitHub is home to millions of open source projects. Try one out or get inspired to create your own.</p>
+                        </li>
+                        <li>
+                            <img src="img/feature-tile__platform.png" alt="platform">
+                            <h3>One platform, from start to finish</h3>
+                            <p>With hundreds of integrations, GitHub is flexible enough to be at the center of your development process.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Where is -->
+    <section class="section section--where-is">
+        <div class="inner">
+            <div class="summary__title">
+                Where is GitHub?
+            </div>
+            <div class="summary__discription">
+                GitHub is where people build software. More than 18 million people use GitHub to discover, fork, and contribute to over 48 million projects.
+            </div>
+            <div id="map">
+
+            </div>
+        </div>
+    </section>
+    <section class="section section--pricing">
+        <div class="inner">
+            <div class="card">
+                <div class="cell cell1">
+                    <a href="#" class="btn btn--primary">Sign up for GitHub</a>
+                </div>
+                <div class="cell cell2">
+                    Public projects are always free. Work together across unlimited private repositories for $7 / month.
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
+<script>
+    // 지도 넣기
+    function initMap(){
+        const myLatLng = {
+            lat: 37.27389488016164, 
+            lng: 127.06103146738741
+
+        }
+        const map = new google.maps.Map(
+            document.getElementById('map'),
+            {
+                center: myLatLng,
+                scrollwheel: false,
+                zoom: 15
+            }
+        );
+        const marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Home'
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer></script>
 </body>
 </html>
