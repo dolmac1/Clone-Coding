@@ -41,6 +41,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg==" crossorigin="anonymous" />
     <!-- reset.css 적용(우리의 css보다 앞에 넣어줘야함)-->
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="all and (max-width:1024px)" href="./css/main_medium.css">
+    <link rel="stylesheet" media="all and (max-width:768px)" href="css/main_small.css">
+    <script defer src="./main.js"></script>
 </head>
 <body>
 <div class="body__container">
@@ -55,7 +58,7 @@
         <div class="inner clearfix">
             <div class="menu-group float--left">
                 <div class="logo"><a href="#">GitHub</a></div>
-                <ul class="main-menu">
+                <ul class="main-menu toggle">
                     <li><a href="#">Personal</a></li>
                     <li><a href="#">Open sourse</a></li>
                     <li><a href="#">Business</a></li>
@@ -63,7 +66,7 @@
                 </ul>
             </div>
 
-            <div class="sign-group float--right">
+            <div class="sign-group float--right toggle">
                 <div class="btn-group">
                     <a href="#" class="btn sign-in">Sign in</a>
                     <a href="#" class="btn btn--primary sign-up">Sign up</a>
@@ -78,6 +81,7 @@
                     <li><a href="#">Support</a></li>
                 </ul>
             </div>
+            <div id="toggle-btn">Header Menu Toggle Button</div>
         </div><!--컨텐츠들을 가운데로 몰아줄 컨테이너-->
     </header>
 
@@ -88,7 +92,7 @@
                 <div class="summary__title">
                     How&nbsp;people build&nbsp;software <!--필요에따라 그 띄어쓰기 부분에서 줄바꿈이 안나게 하려면 &nbsp;를 넣자 -->
                 </div>
-                <div class="summary__discription">
+                <div class="summary__description">
                     Millions of developers use GitHub to build personal projects, support their businesses, and&nbsp;work together on open source technologies.
                 </div>
             </div>
@@ -158,7 +162,7 @@
             <div class="summary__title">
                 Where is GitHub?
             </div>
-            <div class="summary__discription">
+            <div class="summary__description">
                 GitHub is where people build software. More than 18 million people use GitHub to discover, fork, and contribute to over 48 million projects.
             </div>
             <div id="map">
@@ -178,6 +182,62 @@
             </div>
         </div>
     </section>
+    <!-- FOOTER -->
+    <footer class="section">
+        <div class="inner clearfix">
+            <ul class="site-links float--right">
+                <li>
+                    <a href="#">Contact GitHub</a>
+                </li>
+                <li>
+                    <a href="#">API</a>
+                </li>
+                <li>
+                    <a href="#">Training</a>
+                </li>
+                <li>
+                    <a href="#">Shop</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+            </ul>
+            <ul class="site-links float--left">
+                <li>
+                    © 2016 GitHub, Inc.
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+                <li>
+                    <a href="#">Security</a>
+                </li>
+                <li>
+                    <a href="#">Status</a>
+                </li>
+                <li>
+                    <a href="#">Help</a>
+                </li>
+            </ul>
+            <a href="#" class="logo">
+                <svg version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 16 16"
+                    fill="#ccc">
+                    <path fill-rule="evenodd"
+                     d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+        </div>
+    </footer>
 </div>
 <script>
     // 지도 넣기
