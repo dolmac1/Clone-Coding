@@ -22,7 +22,7 @@ color:#333333;
   background:#eee linear-gradient(to bottom, #fcfcfc, #eee);
   border:1px solid #d5d5d5;
   border-radius: 4px;
-  display:inline-flex;
+  display:flex;
   align-items:center;
   padding: 0 12px;
   font-size:14px;
@@ -97,7 +97,7 @@ color:#333333;
   line-height: 1.25;
   margin-bottom: 18px;
 }
-.summary__discription{
+.summary__description{
   font-size:25px;
   font-weight: 300;
   color:#767676;
@@ -200,6 +200,17 @@ header .sub-menu li a{
 header .sub-menu li a:hover{
   color: #4078c0;
 }
+#toggle-btn{
+  display:none;
+  background: url("../img/toggle-btn.svg");
+  width: 18px;
+  height:24px;
+  position: absolute;
+  top:16px;
+  right:20px;
+  cursor: pointer;
+  text-indent:-9999px;
+}
 
 /* VISUAL */
 .section--visual{
@@ -241,7 +252,7 @@ header .sub-menu li a:hover{
 }
 
 
-.section--visual .summary__discription{
+.section--visual .summary__description{
   color:#fff;
   text-shadow: 0 1px 1px rgba(0,0,0,.25), 
                0 1px 25px rgba(0,0,0,.75);
@@ -324,9 +335,9 @@ header .sub-menu li a:hover{
   max-width:1200px;
 }
 .section--feature .tiles ul{
-  display:grid;
-  grid-template-columns: repeat(4,1fr);
-
+  /* display:grid;
+  grid-template-columns: repeat(4,1fr); */
+  /* 그리드가 되는 브라우저는 이걸로 */
 }
 .section--feature .tiles li{
   padding: 34px 24px;
@@ -334,8 +345,8 @@ header .sub-menu li a:hover{
   line-height: 1.5;
   border-right: 1px solid #e5e5e5;
   box-sizing: border-box;
-  /* float:left;
-  width:25%; */ /*grid 안되는 브라우저일 경우*/
+  float:left;
+  width:25%; /*grid 안되는 브라우저일 경우*/
 }
 .section--feature .tiles li:last-child{
   border:none;
@@ -406,3 +417,45 @@ header .sub-menu li a:hover{
   flex:1;
   border-left: 1px solid #e5e5e5;
 }
+
+/* FOOTER */
+footer{
+
+}
+
+footer .inner{
+  padding: 50px 0;
+  border-top: 1px solid #eee;
+}
+
+footer .site-links{
+  display:flex;
+}
+
+footer .site-links li{
+  font-size:12px;
+  margin-right:10px;
+  color:#767676;
+}
+footer .site-links li a{
+  color: #4078c0;
+}
+
+footer .site-links li a:hover{
+  text-decoration: underline; 
+}
+footer .logo{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  width:24px;
+  height:24px;
+}
+
+footer .logo:hover svg {
+  fill: #4078c0;
+}
+
